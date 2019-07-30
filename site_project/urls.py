@@ -22,4 +22,5 @@ urlpatterns = [
     path('chaining/', include('smart_selects.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('djeym/', include('djeym.urls', namespace='djeym')),
+    path('', include('favicon.urls')),
 ]

@@ -9,8 +9,12 @@ verify_ssl = true
 django = "==2.2.3"
 gunicorn = "==19.9.0"
 whitenoise = "==3.3.1"
-flask = "*"
-imagekit = "*"
+django-imagekit = "*"
+python-slugify = "*"
+django-ckeditor = "*"
+lxml = "*"
+django-ipware = "*"
+django-favicon = "*"
 
 [requires]
 python_version = "3.6"

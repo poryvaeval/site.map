@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'djeym',
     'whitenoise.runserver_nostatic',
+    'favicon',
     
 ]
  #django-ckeditor

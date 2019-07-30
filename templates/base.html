@@ -4,5 +4,13 @@
 </header>
 
 {% block content %}
+{% load static %}
 
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Page</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+  </head>
+</html>
 {% endblock content %}
