@@ -9,7 +9,8 @@ verify_ssl = true
 django = "==2.2.3"
 gunicorn = "==19.9.0"
 whitenoise = "==3.3.1"
-imagekit = "==2.1.0"
+flask = "*"
+imagekit = "*"
 
 [requires]
 python_version = "3.6"
