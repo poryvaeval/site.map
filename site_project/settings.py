@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.apps.AppsConfig',
-    'imagekit',
+    'django-imagekit',
     'smart_selects',
     'ckeditor',
     'ckeditor_uploader',
