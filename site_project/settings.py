@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.apps.AppsConfig',
-    
+    'imagekit',
     'smart_selects',
     'ckeditor',
     'ckeditor_uploader',
@@ -75,7 +75,7 @@ CKEDITOR_CONFIGS = {
 
 LOGIN_URL = '/admin/'
 
-JQUERY_URL = True
+JQUERY_URL = False
 USE_DJANGO_JQUERY = True
 
 DJEYM_YMAPS_API_KEY = ''
