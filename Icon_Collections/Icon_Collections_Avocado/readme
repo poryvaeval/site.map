@@ -1,0 +1,36 @@
+RU:
+1. Коллекции иконок для маркеров, а также исходные изображения и скриншоты находятся в разделе "Release".
+
+2. Коллекции иконок упакованы в файлы с раширением типа ".json".
+   Пример: Release/Light/Light-golden Avocado/light_golden_avocado.json
+
+3. Чтобы установить коллекцию, зайдите в административную панель вашего проекта и перейдите по алресу ЯНДЕКС КАРТЫ >> Коллекции иконок для маркеров. Далее, нажмите кнопку "ЭКСПОРТИРОВАТЬ КОЛЛЕКЦИЮ ИКОНОК" и добавьте выбранный файл коллекции.
+
+4. Иконки из коллекции располагаются по адресу ЯНДЕКС КАРТЫ >> Иконки для маркеров.
+
+5. Чтобы задействовать коллекцию иконок, перейдите по адресу ЯНДЕКС КАРТЫ >> Карты.
+   Создавая новую карту, выберите нужную коллекцию и сохраните результат.
+
+P.S.
+В разделе "source" хранится исходный графический материал для ваших творческих целей.
+
+С наилучшими пожеланиями от проекта "DjEYM".
+
+
+EN:
+1. Collection of icons for markers, as well as source images and screenshots are in the "Release" section.
+
+2. Icon collections are packed into files with the extension ".json".
+   Example: Release / Light / Light-golden Avocado / light_golden_avocado.json
+
+3. To install the collection, go to the administrative panel of your project and go to the Yandex Yandex CARD >> Collection of icons for markers. Next, click the "EXPORT IKON COLLECTION" button and add the selected collection file.
+
+4. Icons from the collection are located at YANDEX CARD >> Icons for markers.
+
+5. To use the collection of icons, go to the Yandex CARD >> Maps.
+   Creating a new map, select the desired collection and save the result.
+
+P.S.
+In the "source" section is stored the original graphic material for your creative purposes.
+
+Best wishes from the project "DjEYM".

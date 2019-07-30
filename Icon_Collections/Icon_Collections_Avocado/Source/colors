@@ -1,0 +1,26 @@
+Light:
+    blue: #1e98ff
+    brown: #917c6f
+    gold: #ffd42a
+    green: #56db40
+    khaki: #b0a464
+    moray: #48d1cc
+    orange: #ff931e
+    pink: #f371d1
+    red: #ff2a2a
+
+
+Dark:
+    blue: #177bc9
+    brown: #6c5d53
+    gold: #d4aa00
+    green: #008000
+    khaki: #a08844
+    moray: #008080
+    night: #0e4779
+    orange: #d45500
+    pink: #800080
+    red: #d40000
+
+
+The color of objects on the icons (Цвет объектов на иконках): #999

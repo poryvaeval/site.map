@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ирбитский уезд. Переписи.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--
+        Укажите свой API-ключ. Тестовый ключ НЕ БУДЕТ работать на других сайтах.
+        Получить ключ можно в Кабинете разработчика: https://developer.tech.yandex.ru/keys/
+    -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <script src="icon_customImage.js" type="text/javascript"></script>
+	<style>
+        html, body, #map {
+            width: 100%; height: 100%; padding: 0; margin: 0;
+        }
+        .header {
+            height: 10%;
+            text-align: center;
+            padding-top: 20px;
+        }
+         .content {
+             padding: 10px;
+         } 
+    </style>
+</head>
+<body>
+<div class="header">Ирбитский уезд. Население 1700-1900</div>
+<div class='content'>Краткая инструкция: нажмите на маркер населенного пункта, выберите нужный год и перейдите на соответствующую страницу. Черный маркер: село с церковью. Красный маркер: существующая деревня. Синий маркер: исчезнувшая деревня</div>
+
+<div id="map"></div>
+</body>
+</html>
