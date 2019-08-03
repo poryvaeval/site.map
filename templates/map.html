@@ -2,22 +2,35 @@
 
 
 
-  {% block scripts %}
-  
-  {% endblock scripts %} 
+
 
 {% block content %}
-<head>
+{% load i18n staticfiles djeymtags %}
+<head>    
+    <!-- START CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static "djeym/plugins/fontawesome/css/all.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "djeym/plugins/boxiOS/boxios.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "djeym/css/ymfront.min.css" %}">
+            
     <title>Ирбитский уезд. Переписи.</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.4.3/polyfill.min.js" nomodule></script>  
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
 <div class="header">Ирбитский уезд. Население 1700-1900</div>
 <div class='content'>Краткая инструкция: нажмите на маркер населенного пункта, выберите нужный год и перейдите на соответствующую страницу. Черный маркер: село с церковью. Красный маркер: существующая деревня. Синий маркер: исчезнувшая деревня</div>
 
-<div id="map"></div>
-</body>
-<style>
+<!-- START MAP -->
+<div id="djeymYMapsID" class="djeym-ymap" style="width: auto; height: 400px"></div>
+<!-- END MAP -->
+
+  <!-- START JS -->
+  <script type="text/javascript" src="{% static "djeym/js/jquery-3.3.1.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "djeym/plugins/boxiOS/boxios.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "djeym/plugins/fontawesome/js/all.min.js" %}"></script>
+  {% djeym_load_ymap slug='map' panel='djeym/includes/panel.html' %}
+  <!-- END JS -->
+    <style>
         html, body, #map {
             width: 100%; height: 100%; padding: 0; margin: 0;
         }
@@ -30,4 +43,7 @@
              padding: 10px;
          } 
     </style>
+</body>
+    
 {% endblock content %}
+

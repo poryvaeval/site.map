@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -44,15 +43,19 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'djeym',
     'whitenoise.runserver_nostatic',
-    'favicon',
+    'crispy_forms',
+    'users.apps.UsersConfig',
     
 ]
- #django-ckeditor
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+AUTH_USER_MODEL = 'users.CustomUser'
+
+# django-ckeditor
 CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_FILENAME_GENERATOR = 'djeym.utils.get_filename'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
-CKEDITOR_ALLOW_NONIMAGE_FILES = False #Only image files
+CKEDITOR_ALLOW_NONIMAGE_FILES = False  # Only image files
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
@@ -64,11 +67,11 @@ CKEDITOR_CONFIGS = {
         'height': 400,
         'width': 362,
         'colorButton_colors': 'FFFFFF,F08080,CD5C5C,FF0000,FF1493,C71585,800080,F0E68C,'
-                            'BDB76B,6A5ACD,483D8B,3CB371,2E8B57,9ACD32,008000,808000,'
-                            '20B2AA,008B8B,00BFFF,F4A460,CD853F,A52A2A,708090,34495e,'
-                            '999966,333333,82cdff,1e98ff,177bc9,0e4779,56db40,1bad03,'
-                            '97a100,595959,b3b3b3,f371d1,b51eff,793d0e,ffd21e,ff931e,'
-                            'e6761b,ed4543',
+        'BDB76B,6A5ACD,483D8B,3CB371,2E8B57,9ACD32,008000,808000,'
+        '20B2AA,008B8B,00BFFF,F4A460,CD853F,A52A2A,708090,34495e,'
+        '999966,333333,82cdff,1e98ff,177bc9,0e4779,56db40,1bad03,'
+        '97a100,595959,b3b3b3,f371d1,b51eff,793d0e,ffd21e,ff931e,'
+        'e6761b,ed4543',
         'colorButtom_enableAutomatic': False,
         'colorButtom_enableMore': True
     }
@@ -93,6 +96,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',  # <-----------------------------------------------
 ]
 
 ROOT_URLCONF = 'site_project.urls'
@@ -149,7 +153,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-Ru'  # <---------------------------------------------------------------------------
 
 TIME_ZONE = 'UTC'
 
@@ -162,5 +167,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'  # <--------------------------------------------------------------------------
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # <---------------------------------------------------
